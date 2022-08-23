@@ -1,0 +1,72 @@
+<!-- <table>
+    <tr>
+      <th>Index</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>CNP</th>
+      <th>Gender</th>
+    </tr>
+ <tr>
+    <td>01</td>
+    <td>Andrei</td>
+    <td>Bobi</td>
+    <td>500</td>
+    <td>M</td>
+
+ </tr>
+
+ <tr>
+    <td>02</td>
+    <td>Laura</td>
+    <td>Raul</td>
+    <td>500</td>
+    <td>F</td>
+    
+ </tr>
+  </table> -->
+
+  <!-- <button routerLink="add">Go to form</button> -->
+
+  <table>
+    <!-- <tr>
+      <th>Index</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>CNP</th>
+      <th>Birth Date</th>
+      <th>Gender</th>
+    </tr> -->
+    <tr *ngFor="let initialOwner of ownerList; let i = index">
+      <td>{{ i }}</td>
+      <td>{{ initialOwner.firstName }}</td>
+      <td>{{ initialOwner.lastName }}</td>
+      <td>{{ initialOwner.cnp }}</td>
+      <td>{{ initialOwner.birthDate }}</td>
+      <!-- <td>{{ initialOwner.birthDate | date:'mediumDate' }}</td> -->
+      <td>{{ initialOwner.gender }}</td>
+      <td>
+        <button type="button" (click)="editValues(initialOwner)">Edit</button>
+      </td>
+    </tr>
+  </table>
+
+  <form>
+    <!-- <label for="input">Input:</label><br>
+    <input type="text" id="input" name="input"><br> -->
+
+  <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label for="CNP">CNP:</label><br>
+    <input type="text" id="CNP" name="CNP"><br>
+
+    <label for="Gender">Gender:</label><br>
+    <input type="text" id="Gender" name="Gender"><br> 
+
+ <button>Save</button> 
+    
+
+
